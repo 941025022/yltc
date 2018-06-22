@@ -1,0 +1,48 @@
+/* pages/RecApply/RecApply.wxss */
+page{
+  background-color: #e9ece9;
+}
+.jobMgr-receive-li {
+    height: auto;
+    width: 96%;
+    overflow: hidden;
+    padding-left: 4%!important;
+    background: #fff;
+    margin-top: 6px;
+}
+.jobMgr-li-top {
+    height: 32px;
+    line-height: 32px;
+    margin-right: 4%;
+}
+.jobMgr-li-mid {
+    padding: 15px 0;
+}
+.jobMgr-li-mid-img {
+    width: 50px;
+    height: 50px;
+}
+.jobMgr-li-mid-p {
+    width: 76%;
+    padding-right: 4%;
+}
+.jobMgr-li-p-cont {
+    margin-top: 6px;
+    line-height: 20px;
+}
+.jobMgr-li-p-cont-top {
+    height: 16px;
+    line-height: 16px;
+}
+.jobMgr-li-cont-job {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 4px;
+    min-width: 50%;
+    text-align: left;
+}
+.jobMgr-li-cont-span {
+    height: 16px;
+    line-height: 16px;
+}

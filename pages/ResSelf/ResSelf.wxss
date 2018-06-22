@@ -1,0 +1,26 @@
+/* pages/ResSelf/ResSelf.wxss */
+page{
+  background-color: #e9ece9;
+}
+.resSelf-textarea {
+    margin: 0 auto;
+    width: 94%;
+    padding-top: 8px;
+    overflow-y: auto;
+    color: #9b9b9b;
+    height: 160px!important;
+    font-size: 14px;
+    opacity: .8;
+    
+}
+.resWork-textarea-num {
+    height: 28px;
+    opacity: 0.5;
+    padding-right: 3%;
+}
+.resSelf-cont-div {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 5%;
+    margin-top: 15px;
+}

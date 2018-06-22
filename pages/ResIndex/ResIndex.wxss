@@ -1,0 +1,57 @@
+/* pages/ResIndex/ResIndex.wxss */
+.resindex-top {
+    position: relative;
+    width: 100%;
+    height: 159px;
+    background: url(http://mp.jc99.cn//images/PerMgr/Per/ResTopBg.png) no-repeat;
+    padding-top: 33px;
+    background-size: cover;
+}
+.resindex-top-img {
+    width: 65px;
+    height: 65px;
+    background: url(http://mp.jc99.cn//ImageUpload/PerMgr/PerPhoto/112831_201705120144415687983.jpg) no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.resindex-top-p1 {
+    color: #fff;
+    margin-top: 15px;
+    opacity: .8;
+}
+.resindex-top-p2 {
+    color: #fff;
+    margin-top: 5px;
+    opacity: .8;
+}
+.resindex-nav {
+    padding: 21px 0 13px 0;
+    border-bottom: 1px solid #EBEBEB;
+    margin-bottom: 12px;
+}
+.resindex-nav-div {
+    display: block;
+    width: 33%;
+    border-right: 1px solid #F6F6F6;
+}
+.resindex-nav-div-p {
+    margin-top: 5px;
+}
+page{
+  background-color: #e9ece9;
+}
+.resindex-main-div {
+    display: block;
+    border-bottom: 1px solid #EBEBEB;
+    height: 52px;
+    line-height: 52px;
+}
+.resindex-main-div-ico {
+    vertical-align: middle;
+    margin-left: 5%;
+    margin-right: 10px;
+}
+.resindex-main {
+    margin-bottom: 12px;
+    border-top: 1px solid #EBEBEB;
+}

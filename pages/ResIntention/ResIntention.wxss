@@ -1,0 +1,136 @@
+/* pages/ResIntention/ResIntention.wxss */
+page{
+  background-color: #e9ece9;
+}
+.quyu{
+    position: relative;
+    display: none;
+    height: 500rpx;
+    z-index: 5;
+    top: 0;
+}
+.quyu .qy{
+    overflow-y: scroll;
+    float: left;
+    width: 33.33%;
+    height: 500rpx;
+    line-height: 80rpx;
+    box-sizing: border-box; 
+    font-size: 14px;
+    color: #717273;
+}
+.qy view{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space:nowrap;  
+    padding-left: 15rpx; 
+}
+.quyu-left{
+    background: #c5c5c5;
+}
+.quyu-center{
+    background: #e0e0e0;
+}
+.quyu-right{
+    background: #fff;
+}
+.quyu-right view{
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.fullbg{
+    position: fixed;
+    top:57px;
+    /*z-index: 1;*/
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    /*transition: all 2s;*/
+    opacity: 0;
+}
+.fullopacity{
+    opacity: .5;
+}
+.money-left,.money-right{
+    width: 50%!important;
+}
+.area-contain {
+    width: 94%;
+    padding: 0px 3%;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    background: #fff;
+}
+.area-contain-top {
+    height: 30px;
+    line-height: 30px;
+    bottom: -3px;
+}
+.area-contain-top-left {
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    margin-top: 3px;
+}
+.labelView {
+    margin-top: 2px;
+    color: #b4b4b4;
+    font-size: 13px;
+}
+.tabList-left {
+    width: 30%;
+    margin-top: 0%;
+    overflow-y: auto;
+    background-color: #e9ece9;
+}
+.ResWorkEditLi{
+    padding: 10px 0;
+    text-align: center;
+    color: #fb6c25;
+    display: inline-block;
+    font-size: 14px;
+}
+.active {
+    background-color: #fff;
+}
+.unactive {
+    background-color: #e9ece9;
+}
+
+.contentTab{
+  padding-left: 3%;
+  float: left;
+  width: 67%;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+/*行业意向页面*/
+.btn-sel-out {
+    padding: 5.2px 12px;
+    font-size: 13px;
+    border-radius: 2px!important;
+    color: #b4b4b4;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.jobDivCont {
+    width: 94%;
+    margin: 0 auto;
+    font-size: 0;
+}
+.btn-sel-on {
+    background-color: #fc9c35;
+    border: 1px solid #fc8603;
+    color: #fff;
+}

@@ -1,0 +1,108 @@
+<!--pages/ResView/ResView.wxml-->
+<!--基本简历-->
+<navigator hover-class="none" class="dpl-b txt-c bd-col-bottom-grayLight bg-col-white new-top" url="../ResBase/ResBase">
+  <view class="pos-rel new-top-img">
+      <image src="../../images/ResBg.png" class="pos-rel resView-headImg"></image>
+      <view class="icon ico-job-res-soldBoy ft22 new-top-boy"></view>
+  </view>
+  <view class="ftW-b ft15 new-top-p">谢谢</view>
+  <view>
+     <text class="new-top-label">男</text>
+     <text class="new-top-label">24</text>
+     <text class="new-top-label">专科</text>
+  </view>
+</navigator>
+<!--求职意向-->
+<navigator hover-class="none" class="dpl-b clear bg-col-white new-des" url="../ResIntention/ResIntention">
+   <view class="fl txt-c new-des-div bd-col-right-grayLight">
+       <view class="ft13 ft-col-grayB3">期望月薪</view>
+       <view class="ft15 ft-col-orange new-des-div-p">面议</view>
+   </view>
+   <view class="fl txt-c new-des-div bd-col-right-grayLight">
+       <view class="ft13 ft-col-grayB3">工作经验</view>
+       <view class="ft15 ft-col-new new-des-div-p">一年以下</view>
+   </view>
+   <view class="fl txt-c new-des-div bd-col-right-grayLight">
+       <view class="ft13 ft-col-grayB3">求职状态</view>
+       <view class="ft15 ft-col-new new-des-div-p">在职-考虑机会</view>
+   </view>
+</navigator>
+<navigator hover-class="none" class="dpl-b bg-col-white new-desD" url="../ResIntention/ResIntention">
+     <view class="clear new-desD-p">
+         <view class="fl w-20p ft-col-grayB3">求职意向</view>
+         <view class="fl span-c ft-col-new"> 电子电气 - 电子技术研发工程师</view>
+     </view>
+     <view class="clear new-desD-p">
+         <view class="fl w-20p ft-col-grayB3">行业意向</view>
+         <view class="fl span-c ft-col-new"> 银行 - 公关/市场/会展</view>
+     </view>
+     <view class="clear new-desD-p">
+         <view class="fl w-20p ft-col-grayB3">意向城市</view>
+         <view class="fl span-c ft-col-new"> 杭州市 - 上城区 </view>
+     </view>
+</navigator>
+<!--教育经历-->
+<navigator hover-class="none" url="../ResEduEdit/ResEduEdit" class="ft14 dpl-b bg-col-white new-edu">
+     <view class="bd-col-bottom-grayDark ft-col-green new-edu-top">教育经历</view>
+     <view class="pos-rel new-big-big">
+         <view class="new-edu-div-big">
+             <view class="pos-rel bd-col-left-grayLight new-edu-div">
+                 <view class="big-orange">
+                    <view class="small-orange"></view>
+                 </view>
+                 <view class="clear">
+                    <text class="fl ft-col-new">bh</text>
+                    <text class="fr ft-col-grayB3">2012.01－2012.02</text>
+                 </view>
+                 <view class="new-edu-div-div ft-col-new">u激动的嫩  (高中)</view>
+                 <view class="ft14 new-padB ft-col-grayB3"></view>
+             </view>
+         </view>
+         <view class="new-bottom"></view>
+     </view>
+</navigator>
+<!--工作经历-->
+<navigator hover-class="none" url="../ResWorkEdit/ResWorkEdit" class="ft14 dpl-b bg-col-white new-edu">
+     <view class="bd-col-bottom-grayDark ft-col-green new-edu-top">工作经验</view>
+     <view class="pos-rel new-big-big">
+         <view class="new-edu-div-big">
+             <view class="pos-rel bd-col-left-grayLight new-edu-div">
+                 <view class="big-orange">
+                    <view class="small-orange"></view>
+                 </view>
+                 <view class="clear">
+                    <text class="fl ft-col-new">bh</text>
+                    <text class="fr ft-col-grayB3">2012.01－2012.02</text>
+                 </view>
+                 <view class="new-edu-div-div ft-col-new">u激动的嫩  (高中)</view>
+                 <view class="ft14 new-padB ft-col-grayB3">
+                                    ID难道你
+                                </view>
+             </view>
+         </view>
+         <view class="new-bottom"></view>
+     </view>
+</navigator>
+<!--我的亮点-->
+<navigator hover-class="none" url="../ResSelf/ResSelf" class="ft14 dpl-b bg-col-white new-self">
+    <view class="bd-col-bottom-grayDark ft-col-green new-edu-top">自我评价</view>
+    <view class="ft-col-new new-self-div">几点开那些年</view>
+</navigator>
+<!--联系信息-->
+<navigator hover-class="none" class="ft14 dpl-b bg-col-white new-self-last" url="../ResCon/ResCon">
+     <view class="bd-col-bottom-grayDark ft-col-green new-edu-top">联系信息</view>
+     <view class="ft-col-new new-contact-div">
+         <view class="new-self-div-div">
+           <text class="ft-col-grayB3">联系电话  </text>
+           <text class="ft-col-new">13323338331316</text>
+         </view>
+         <view class="new-self-div-div">
+           <text class="ft-col-grayB3">微       信    </text>
+           <text class="ft-col-new">jfkfnkdm</text>
+         </view>
+         <view class="new-self-div-div">
+           <text class="ft-col-grayB3">现居住地    </text>
+           <text class="ft-col-new">浙江省 杭州市 临安市 </text>
+         </view>
+     </view>
+</navigator>

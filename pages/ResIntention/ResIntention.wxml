@@ -1,0 +1,117 @@
+<!--pages/ResIntention/ResIntention.wxml-->
+<view style="display:{{view1}}">
+    <view bindtap="listyx" class="list-li">
+            <view class="list-li-left">期望月薪</view>
+            <view class="list-li-center">
+              <view class="list-li-center-inp">{{moneyMin+moneyMax}}</view>
+            </view>
+            <view class="list-li-right">
+                <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+            </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--月薪选择-->
+        <view class="quyu {{yxopen ? 'show' : 'hide'}}">
+                <view class="qy quyu-left money-left">
+                    <view class="current" wx:for="{{moneyleft}}" bindtap="selectleftMin" data-money='{{index}}'>
+                        {{index}}
+                    </view>
+                </view>
+                <view class="qy quyu-right money-right" bindtap="selectrightMax">
+                    <view data-item="{{item}}" wx:for="{{moneyright}}">
+                        {{item}}
+                    </view>
+                </view>
+        </view>
+        <!--遮罩层-->
+        <view style="z-index:{{zIndex}}" class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+
+     <view bindtap="go4" class="list-li">
+            <view class="list-li-left">行业意向</view>
+            <view class="list-li-center">
+              <view class="list-li-center-inp">行业意向</view>
+            </view>
+            <view class="list-li-right">
+                <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+            </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view bindtap="go2" class="list-li">
+            <view class="list-li-left">职业意向</view>
+            <view class="list-li-center">
+              <view class="list-li-center-inp">职业意向</view>
+            </view>
+            <view class="list-li-right">
+                <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+            </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+            <view class="list-li-left">工作地点</view>
+            <view class="list-li-center">
+              <view class="list-li-center-inp">工作地点</view>
+            </view>
+            <view class="list-li-right">
+                <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+            </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+            <view class="list-li-left">求职状态</view>
+            <view class="list-li-center">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="list-li-center-inp">
+                  {{array[index]}}
+                </view>
+              </picker>
+            </view>
+            <view class="list-li-right">
+                <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+            </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>
+</view>
+<view class="bg-col-white" style="display:{{view2}}">
+   <view bindtap="go3" class="bd-col-bottom-gray area-contain">
+        <!--数据库读取的数据S-->
+        <view class="pos-rel w-100p area-contain-top">
+            <view class="pos-rel fl ft15 w-100p area-contain-top-left">销售</view>
+            <view class="fr txt-r icon ft14 ico-sys-btn-rightArrow area-list-li-right-ico"></view>
+        </view>
+        <view class="clear w-97p">
+                <text class="labelView">销售 | </text>
+                <text class="labelView">销售管理 | </text>
+                <text class="labelView">销售行政 | </text>
+        </view>
+        <!--读取结束E-->
+    </view>
+    <view class="bd-col-bottom-gray area-contain">
+        <!--数据库读取的数据S-->
+        <view class="pos-rel w-100p area-contain-top">
+            <view class="pos-rel fl ft15 w-100p area-contain-top-left">销售</view>
+            <view class="fr txt-r icon ft14 ico-sys-btn-rightArrow area-list-li-right-ico"></view>
+        </view>
+        <view class="clear w-97p">
+                <text class="labelView">销售 | </text>
+                <text class="labelView">销售管理 | </text>
+                <text class="labelView">销售行政 | </text>
+        </view>
+        <!--读取结束E-->
+    </view>
+</view>
+<view style="display:{{view3}}">
+    <view style="height:{{height}}px" class="fl dpl-ib tabList-left" >
+          <view wx:for="{{items}}" wx:key="{{item.userId}}" wx:for-index="idx"  bindtap="userListAction" data-idx="{{idx}}" class="w-100p ResWorkEditLi {{userCellId==idx?'active':'unactive'}}">{{item.name}}</view>
+    </view>
+    <view style="height:{{height}}px" class="contentTab">
+          <view wx:for="{{works}}" wx:key="{{item.userId}}" wx:for-index="idx" class="dpl-ib job-btn btn-sel-out">{{item.work}}</view>
+          
+    </view>
+</view>
+<view style="display:{{view4}}">
+      <view class="clear jobDivCont">
+           <view wx:for="{{hyyx}}" data-index="{{index}}" bindtap="addColor" class="btn-sel-out {{item.claass}}">{{item.name}}</view>
+      </view>
+</view>
+ 

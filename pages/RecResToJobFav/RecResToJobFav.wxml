@@ -1,0 +1,18 @@
+<!--pages/RecJobToResFav/RecJobToResFav.wxml-->
+<view bindtap="delShow"  wx:for="{{items}}" class="jobMgr-li" wx:key="{{index}}" data-index="{{index}}">
+        <image class="fl bdR-100p jobMgr-cont-li-img" src="../../images/res_bg.png"></image>
+        <view class="fr jobMgr-li-p">
+             <view class="clear">
+                 <text class="fl ft13 ft-col-green">{{item.name}}</text>
+                 <text class="fr ft12 ft-col-gray">04.25</text>
+             </view>
+             <view class="clear jobMgr-li-p-cont">
+                 <text class="fl ft12 ft-col-gray w-100p txt-l">有链同城</text>
+             </view>
+        </view>
+        <view class="dialog {{item.flag ? 'show' : 'hide'}}">
+             <navigator hover-class="none" url="url" class="dialog-fl">编辑</navigator> 
+             <view data-index="{{index}}"  bindtap="lidelete" class="dialog-fr">删除</view>
+        </view>
+</view>
+

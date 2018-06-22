@@ -1,0 +1,83 @@
+.touch-item {
+ font-size: 14px;
+ display: flex;
+ justify-content: space-between;
+ border-bottom:1px solid #ccc;
+ width: 100%;
+ overflow: hidden
+}
+.content {
+ width: 94%;
+ padding: 3%;
+ line-height: 22px;
+ margin-right:0;
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ margin-left: -90px
+}
+.del {
+ background-color: orangered;
+ width: 90px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ -webkit-transform: translateX(90px);
+ transform: translateX(90px);
+ -webkit-transition: all 0.4s;
+ transition: all 0.4s;
+}
+.touch-move-active .content,
+.touch-move-active .del {
+ -webkit-transform: translateX(0);
+ transform: translateX(0);
+}
+.bottom-whole-btn {
+    position: fixed;
+    bottom: 0;
+    z-index: 12;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #fc9c35;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+}
+
+.dialog{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.dialog-fl{
+  float: left;
+  width: 50%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  background-color: red;
+}
+.dialog-fr{
+  float: right;
+  width: 50%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background-color: blue;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

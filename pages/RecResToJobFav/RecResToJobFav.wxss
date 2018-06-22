@@ -1,0 +1,70 @@
+/* pages/RecJobToResFav/RecJobToResFav.wxss */
+page{
+  background-color: #e9ece9;
+}
+.jobMgr-li {
+    position: relative;
+    width: 96%;
+    padding-left: 4%!important;
+    line-height: normal;
+    height: 70px;
+    background-color: #fff;
+    margin-bottom: 1px;
+}
+.jobMgr-cont-li-img {
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+}
+.jobMgr-li-p {
+    width: 76%;
+    padding: 13px 0;
+    padding-right: 4%;
+}
+.jobMgr-li-p-cont {
+    margin-top: 6px;
+    line-height: 20px;
+}
+.dialog{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.dialog-fl{
+  float: left;
+  width: 50%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  background-color: red;
+}
+.dialog-fr{
+  float: right;
+  width: 50%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background-color: blue;
+}
+@keyframes fadeInRight {
+	0% {
+		/*opacity: .5;*/
+		-webkit-transform: translateX(25%);
+	}	
+	100% {
+		/*opacity: 1;*/
+		-webkit-transform: translateX(0);
+	}
+}
+.show{
+     animation: fadeInRight .5s linear;
+}
+.hide{
+  display: none;
+}
+

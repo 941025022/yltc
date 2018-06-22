@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/JobList/JobList",
+    "pages/index/index",
+    "pages/compDetail/compDetail",
+    "pages/JobDetail/JobDetail",
+    "pages/RecResToJobFav/RecResToJobFav",
+    "pages/RecApply/RecApply",
+    "pages/ResIntention/ResIntention",
+    "pages/RecJobToResLog/RecJobToResLog",
+    "pages/RecJobToResFav/RecJobToResFav",
+    "pages/ResWorkEdit/ResWorkEdit",
+    "pages/ResEduEdit/ResEduEdit",
+    "pages/ResView/ResView",
+    "pages/ResEduList/ResEduList",
+    "pages/ResWorkList/ResWorkList",
+    "pages/ResCon/ResCon",
+    "pages/ResBase/ResBase",
+    "pages/ResSelf/ResSelf",
+    "pages/ResMgr/ResMgr",
+    "pages/ResIndex/ResIndex",
+    "pages/template/menu",
+    "pages/logs/logs",
+    "pages/ResGuide/ResGuide"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

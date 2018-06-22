@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <navigator hover-class="none" class="nav-title" url="../list/list">个人求职</navigator>
+  <navigator hover-class="none" class="nav-li" url="../JobList/JobList">最新职位</navigator>
+  <navigator hover-class="none" class="nav-li" url="../JobDetail/JobDetail">职位详情</navigator>
+  <navigator hover-class="none" class="nav-li" url="../compDetail/compDetail">公司详情</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResGuide/ResGuide">简历引导页</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResMgr/ResMgr">我的简历</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResBase/ResBase">基本信息</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResIntention/ResIntention">求职意向</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResSelf/ResSelf">我的亮点</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResCon/ResCon">联系方式</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResWorkEdit/ResWorkEdit">工作经验</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResWorkList/ResWorkList">工作经验列表</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResEduEdit/ResEduEdit">教育经历</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResEduList/ResEduList">教育经历列表</navigator>
+  <navigator hover-class="none" class="nav-li" url="../ResView/ResView">我的微简历</navigator>
+  <navigator hover-class="none" class="nav-li" url="../RecApply/RecApply">职位申请记录</navigator>
+  <navigator hover-class="none" class="nav-li" url="../RecResToJobFav/RecResToJobFav">职位收藏</navigator>
+  <navigator hover-class="none" class="nav-li" url="../RecJobToResFav/RecJobToResFav">对我的简历感兴趣</navigator>
+  <navigator hover-class="none" class="nav-li" url="../RecJobToResLog/RecJobToResLog">谁看了我的简历</navigator>
+</view>
+

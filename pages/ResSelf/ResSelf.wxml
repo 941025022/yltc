@@ -1,0 +1,12 @@
+<!--pages/ResSelf/ResSelf.wxml-->
+<view class="bg-col-white">
+    <textarea bindinput="tongji" class="resSelf-textarea" placeholder="用文字完美展示你的个人才华，让更多的BOSS看到你的闪光点！" maxlength="2000" />
+    <view class="pos-rel w-97p txt-r bg-col-white ft-col-right-gray resWork-textarea-num">
+        <text class="ft15">{{length}}  /2000</text>
+    </view>
+</view>
+<view class="bg-col-white resSelf-cont-div">
+         <text class="dpl-b w-100p ft13 ft-col-gray resSelf-cont-span">友好提示：根据亲的求职意向给出以下参考范本</text>
+         <text class="dpl-b w-100p ft13 ft-col-gray resSelf-cont-span">本人性格开朗，热情大方，为人谦虚谨慎，细心周到，工作中勤于思考，积极进取。工作之余，始终把学习、培训和提高自身综合素质放在首位，具备良好的人际交往、工作协调及语言表达能力。对待工作认真、踏实、负责，能与同事融洽相处，具有优秀的团队合作精神及耐力。</text>
+</view>
+<navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>

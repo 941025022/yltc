@@ -1,0 +1,92 @@
+/* pages/ResWorkEdit/ResWorkEdit.wxss */
+page{
+  background-color: #e9ece9;
+}
+.rzsj{
+  float: left;
+  width: 50%;
+  color: #A9A9A9;
+  font-size: 15px;
+  text-align: right;
+}
+.lzsj{
+  float: right;
+  width: 50%;
+  color: #A9A9A9;
+  font-size: 15px;
+  text-align: right;
+}
+.hx{
+  position: absolute;
+  left: 62%;
+  color: #A9A9A9;
+}
+.gzms{
+  height:56px;
+  line-height:56px;
+  color:#404040;
+  font-size:15px;
+  padding-left: 3%;
+}
+.gzms-text{
+    margin: 0 auto;
+    width: 94%;
+    padding: 0 3%;
+    height: 5.5em;
+    font-size: 14px;
+    color: #C1C1C1;
+    padding-bottom: 20px;
+}
+.gzms-place{
+   color: #C1C1C1;
+}
+.area-contain {
+    width: 94%;
+    padding: 0px 3%;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    background: #fff;
+}
+.area-contain-top {
+    height: 30px;
+    line-height: 30px;
+    bottom: -3px;
+}
+.area-contain-top-left {
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    margin-top: 3px;
+}
+.labelView {
+    margin-top: 2px;
+    color: #b4b4b4;
+    font-size: 13px;
+}
+.tabList-left {
+    width: 30%;
+    margin-top: 0%;
+    overflow-y: auto;
+    background-color: #e9ece9;
+}
+.ResWorkEditLi{
+    padding: 10px 0;
+    text-align: center;
+    color: #fb6c25;
+    display: inline-block;
+    font-size: 14px;
+}
+.active {
+    background-color: #fff;
+}
+.unactive {
+    background-color: #e9ece9;
+}
+
+.contentTab{
+  padding-left: 3%;
+  float: left;
+  width: 67%;
+  background-color: #fff;
+  overflow-y: auto;
+}

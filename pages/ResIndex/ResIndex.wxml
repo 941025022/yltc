@@ -1,0 +1,43 @@
+<!--pages/ResIndex/ResIndex.wxml-->
+<import src="../template/menu.wxml"/>
+  <template is="menu"/>
+
+<view class="txt-c resindex-top">
+   <view class="bdR-100p resindex-top-img"></view>
+   <view class="ft14 resindex-top-p1">ID：112831</view>
+   <view class="ft15 resindex-top-p2">男</view>
+</view>
+<view class="clear bg-col-white resindex-nav">
+   <navigator hover-class="none" class="fl txt-c resindex-nav-div" url="../ResMgr/ResMgr">
+        <view class="icon ico-cen-rec-myRes ft26 ft-col-orange"></view>
+        <view class="ft-col-gray ft13 resindex-nav-div-p">我的简历</view>
+   </navigator>
+   <navigator hover-class="none" class="fl txt-c resindex-nav-div" url="../JobList/JobList">
+        <view class="icon ico-cen-rec-newest ft26 ft-col-blueLight"></view>
+        <view class="ft-col-gray ft13 resindex-nav-div-p">最新职位</view>
+   </navigator>
+   <navigator hover-class="none" class="fl txt-c resindex-nav-div" url="推荐职位">
+        <view class="icon ico-cen-rec-recPos ft26 ft-col-green"></view>
+        <view class="ft-col-gray ft13 resindex-nav-div-p">推荐职位</view>
+   </navigator>
+</view>
+<view class="bg-col-white resindex-main">
+    <navigator hover-class="none" class="resindex-main-div" url="../RecApply/RecApply">
+        <text class="ft21 icon ft-col-grayA5 resindex-main-div-ico ico-cen-wat-check"></text>
+        <text class="ft-col-grayB5 ft14">职位申请记录</text>
+    </navigator>
+    <navigator hover-class="none" class="resindex-main-div" url="../RecResToJobFav/RecResToJobFav">
+        <text class="ft21 icon ft-col-grayA5 ico-cen-wat-resume resindex-main-div-ico"></text>
+        <text class="ft-col-grayB5 ft14">职位收藏</text>
+    </navigator>
+</view>
+<view class="bg-col-white resindex-main">
+    <navigator hover-class="none" class="resindex-main-div" url="../RecJobToResFav/RecJobToResFav">
+        <text class="ft21 icon ft-col-grayA5 resindex-main-div-ico ico-cen-rec-interest"></text>
+        <text class="ft-col-grayB5 ft14">对我的简历感兴趣</text>
+    </navigator>
+    <navigator hover-class="none" class="resindex-main-div" url="../RecJobToResLog/RecJobToResLog">
+        <text class="ft21 icon ft-col-grayA5 ico-cen-rec-browse resindex-main-div-ico"></text>
+        <text class="ft-col-grayB5 ft14">谁看了我的简历</text>
+    </navigator>
+</view>

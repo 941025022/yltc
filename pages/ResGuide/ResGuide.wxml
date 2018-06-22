@@ -1,0 +1,8 @@
+<!--pages/ResGuide/ResGuide.wxml-->
+<image class="img" mode="{{item.mode}}" src="{{src}}"></image>
+<view class="jobGuide-p">
+    <view>BOSS老大们正在等待您的到来</view>
+    <view>编辑简历后会为您推荐最合适的大BOSS</view>
+</view>
+<navigator hover-class="none" class="jobGuide-a" url="../ResBase/ResBase">创建简历</navigator>
+

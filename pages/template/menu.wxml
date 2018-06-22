@@ -1,0 +1,20 @@
+<template name="menu">
+  <view class="clear footer-nav">
+      <navigator bindtap="qiuzhiOn"  class="footer-nav-li" url="../JobList/JobList">
+          <text class="{{isOn ?'ico-nav-footer-jobA':''}} icon ft24 footer-nav-li-span"></text>
+          <text class="ft11 footer-nav-li-txt">求职</text>
+      </navigator>
+      <navigator  class="footer-nav-li" url="javascript:">
+          <text class="icon ico-nav-footer-myA ft24 footer-nav-li-span"></text>
+          <text class="ft11 footer-nav-li-txt">推荐</text>
+      </navigator>
+      <navigator  class="footer-nav-li" url="javascript:">
+          <text class="icon ico-nav-footer-msnA ft24 footer-nav-li-span"></text>
+          <text class="ft11 footer-nav-li-txt">消息</text>
+      </navigator>
+      <navigator  class="footer-nav-li" url="../ResIndex/ResIndex">
+          <text class="icon ico-nav-footer-myB ft24 footer-nav-li-span"></text>
+          <text class="ft11 footer-nav-li-txt">我的</text>
+      </navigator>
+  </view>
+</template>

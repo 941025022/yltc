@@ -1,0 +1,61 @@
+<!--pages/ResWorkEdit/ResWorkEdit.wxml-->
+<view>
+    <view class="list-li">
+              <view class="list-li-left">学校名称</view>
+              <view class="list-li-center">
+                  <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="company" class="pos-rel list-li-center-inp"  placeholder="学校名称" type="text" maxlength="15"/>
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+              <view class="list-li-left">学历</view>
+              <view class="list-li-center">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="list-li-center-inp">
+                  {{array[index]}}
+                </view>
+              </picker>
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+              <view class="list-li-left">专业</view>
+              <view class="list-li-center">
+                  <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="company" class="pos-rel list-li-center-inp"  placeholder="专业" type="text" maxlength="15"/>
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+              <view class="list-li-left">教育时间</view>
+              <view class="list-li-center">
+                <picker class="rzsj" fields='month' mode="date" value="{{date}}" start="1940-09" end="2017-09" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{date}}
+                  </view>
+                </picker>
+                <view class="hx">-</view>
+                <picker class="lzsj" fields='month' mode="date" value="{{date}}" start="1940-09-01" end="2017-09-01" bindchange="bindDateChange2">
+                  <view class="picker">
+                    {{date2}}
+                  </view>
+                </picker>
+
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="bg-col-white gzms">在校经历</view>
+    <textarea class="bg-col-white gzms-text" placeholder-class="gzms-place" maxlength="500" placeholder="在校时光总是美好又短暂的，给大家来分享一下你学生时代的精彩瞬间！" />
+    <navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>
+</view>

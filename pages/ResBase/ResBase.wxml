@@ -1,0 +1,88 @@
+<!--pages/ResBase/ResBase.wxml-->
+
+<view class="main">
+<form bindsubmit="formSubmit">
+    <view class="list-picture" bindtap="choseImg">
+         <view class="list-picture-left">头像</view>
+         <image  mode="aspectFill" src="{{src}}" class="res-headImg"></image>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--头像选择-->
+    <view class="list-li">
+       <view class="list-li-left">姓名</view>
+       <view class="list-li-center">
+           <input style="font-size:{{ft}};" name="name" bindfocus="chongying" class="pos-rel list-li-center-inpxm" placeholder-class="placStyle"  placeholder="姓名" type="text" maxlength="8"/>
+       </view>
+       <view class="list-li-right">
+           <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+       </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--姓名-->
+    <view class="list-li">
+       <view class="list-li-left">性别</view>
+       <view class="list-li-center">
+            <radio-group name="radio" class="radio-group">
+                <label class="radio">
+                        <radio class="radio-type" value="男"/>男
+                </label>
+                    <label class="radio">
+                        <radio class="radio-type" value="女"/>女
+                </label>
+            </radio-group>
+       </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--性别-->
+    <view class="list-li">
+       <view class="list-li-left">出生年份</view>
+       <view class="list-li-center">
+       <picker name="birth" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker list-li-center-inp">
+            {{array[index]}}
+            </view>
+        </picker>
+           
+       </view>
+       <view class="list-li-right">
+           <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+       </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--出生年份-->
+    <view class="list-li">
+       <view class="list-li-left">工作年份</view>
+       <view class="list-li-center">
+       <picker name="work" bindchange="bindPickerChange2" value="{{index1}}" range="{{array2}}">
+            <view class="picker list-li-center-inp">
+            {{array2[index1]}}
+            </view>
+        </picker>
+           
+       </view>
+       <view class="list-li-right">
+           <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+       </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--工作年份-->
+    <view class="list-li">
+       <view class="list-li-left">最高学历</view>
+       <view class="list-li-center">
+       <picker name="edu" bindchange="bindPickerChange3" value="{{index2}}" range="{{array3}}">
+            <view class="picker list-li-center-inp">
+            {{array3[index2]}}
+            </view>
+        </picker>
+           
+       </view>
+       <view class="list-li-right">
+           <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+       </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <!--最高学历-->
+    <navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>
+</form>
+
+</view>

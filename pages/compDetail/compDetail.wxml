@@ -1,0 +1,43 @@
+<!--pages/compDetail/compDetail.wxml-->
+<main class="bg-col-grayLight comp-main">
+    <view class="bg-col-white comp-top">
+        <image class="dpl-b comp-top-img" src="{{compData.compInfoLogo}}"></image>
+        <view class="comp-top-p txt-c">{{compData.compInfoNameLong}}</view>
+        <view wx:if="{{compData.compInfoWeb}}" class="comp-top-p ft14 ft-col-blue txt-c">{{compData.compInfoWeb}}</view>
+        <view wx:else class="comp-top-p ft14 ft-col-blue txt-c">暂无</view>
+        <view class="comp-top-p ft12 ft-col-grayB3 txt-c">
+            <text class="comp-top-p-span">{{compData.comInfoIndstry}}</text>
+            <text class="comp-top-p-span">{{compData.compInfoScale}}</text>
+        </view>
+    </view>
+    <view class="clear bdR-5 bg-col-white jobView-companyDes">
+            <view class="bd-col-bottom-grayDark ft-col-green ft15 jobView-companyDes-title">团队介绍</view>
+            <view class="jobView-companyDes-cont">
+                <view class="ft13 ft-col-new jobView-companyDes-cont-p">
+                {{compData.compInfoIntro}}
+                </view>
+            </view>
+    </view>
+    <view class="bg-col-white comp-jobList">
+        <view class="bd-col-bottom-grayDark ft-col-green ft15 jobView-companyDes-title">其他职位</view>
+        <view bindtap="openJobDetail" wx:for="{{jobData}}" class="comp-jobList-list ft-col-new" data-id="{{item.jobId}}">
+            <view class="bd-col-bottom-grayLight comp-jobList-list-div">
+                <view class="clear">
+                  <view class="fl ft15">{{item.jobName}}</view>
+                  <view class="fr ft12 ft-col-grayB3">{{item.updateTime}}</view>
+                </view>
+                <view wx:if="{{item.endSalary === 0}}" class="ft-col-orange ft14 com-money">面议</view>
+                <view wx:else class="ft-col-orange ft14 com-money">{{item.startSalary}}-{{item.endSalary}}元</view>
+                <view class="ft-col-gray">
+                    <text class="ft13 jobView-job-mgL">{{item.cityName}}</text>
+                    <text class="icon ft14 ft-col-grayB3 ico-job-res-work"></text>
+                    <text wx:if="item.workYear === 0" class="ft13 jobView-job-mgR">不限</text>
+                    <text wx:else class="ft13 jobView-job-mgR">{{item.workYear}}年</text>
+                    <text class="icon ft14 ft-col-grayB3 ico-job-res-edu"></text>
+                    <text wx:if="item.edu === 0" class="ft13 jobView-job-mgR">不限</text>
+                    <text wx:else class="ft13 jobView-job-mgR">{{item.edu}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</main>

@@ -1,0 +1,120 @@
+<!--pages/JobList/JobList.wxml-->
+<view hidden='{{zxzwShow}}' class="view1">
+<!--头部搜索  -->
+  <view class="jobListHead">
+      <view class="sousuo">搜索</view>
+  </view>
+  <view bindtap="tiao" class="jiahead"></view>
+  <!-- <import src="../template/menu.wxml"/> -->
+  <!-- <template is="menu"/> -->
+    <view class="nav">
+      <view class="resList-nav-li" bindtap="listlx">{{jobType}}</view>
+      <view class="resList-nav-li" bindtap="listyx">{{moneyMin+moneyMax}}</view>
+      <view class="resList-nav-li li-none" bindtap="listqy">{{area}}</view>
+    </view>
+    <!--职位类型筛选  -->
+    <view class="quyu {{lxopen ? 'show' : 'hide'}}">
+            <view class="qy quyu-left money-left">
+                <view class="{{firstTypeIndex == index ? 'current' : ''}}" wx:for="{{firstJobTypeData}}" bindtap="clickFirstType" data-name="{{item.name}}" data-code='{{item.code}}' data-index='{{index}}'>
+                    {{item.name}}
+                </view>
+            </view>
+            <view class='qy money-right'>
+              <view class="{{jobType == item.name ? 'current2' : ''}}" bindtap="clickSecondType" data-code="{{item.code}}" wx:for="{{secondJobTypeData}}" data-index='{{index}}' data-name='{{item.name}}'>
+                {{item.name}}
+              </view>
+            </view>
+    </view>
+    <!--地址选择-->
+    <view class="quyu {{qyopen ? 'show' : 'hide'}}">
+            <!-- <view class="qy quyu-left">
+                <view class="{{select1 == index ? 'current' : ''}}" wx:for="{{cityleft}}" bindtap="selectleft1" data-index='{{index}}' data-code='{{cityleft[index].code}}'>
+                    {{cityleft[index].name}}
+                </view>
+            </view> -->
+             <view class="qy quyu-center">
+                <view class="{{select3 == citycenter[index].name ? 'current' : ''}}" wx:for="{{citycenter}}" bindtap="selectcenter" data-index="{{index}}" data-name='{{citycenter[index].name}}' data-code='{{citycenter[index].code}}'>
+                    {{citycenter[index].name}}
+                </view>
+            </view> 
+            <view class="qy quyu-right" bindtap="selectright">
+                <view class="{{area == cityright[index].name ? 'current2' : ''}}" wx:for="{{cityright}}" data-value='{{cityright[index].code}}' data-name='{{cityright[index].name}}'>
+                    {{cityright[index].name}}
+                </view>
+            </view>
+    </view>
+    <!--月薪选择-->
+    <view class="quyu {{yxopen ? 'show' : 'hide'}}">
+            <view class="qy quyu-left money-left">
+                <view class="{{select1 == index ? 'current' : ''}}" wx:for="{{moneyleft}}" bindtap="selectleftMin" data-money='{{index}}' wx:key='{{index}}'>
+                    {{moneyleft[index].num}}
+                </view>
+            </view>
+            <view class=' qy money-right'>
+              <view class="{{select2 == item ? 'current2' : ''}}" bindtap="selectrightMax" data-item="{{item}}" wx:for="{{moneyright}}" wx:key='{{index}}'>
+                {{item}}
+              </view>
+            </view>
+    </view>
+    <!--遮罩层-->
+     <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+     <!--滚动区域  -->
+    <scroll-view style="height:{{scrollheight}}" class="container-body" scroll-y="true"  bindscrolltolower="scrollLoading">
+        <view>
+            <view bindtap="openJobDetail" data-id="{{item.jobId}}" class="jobListN-cont-li" wx:for="{{listData}}" wx:key='{{index}}'>
+              <view class="jobListN-cont-li-top">
+                  <view class="fl ft15">{{item.occupationName}}</view>
+                  <view wx:if="{{item.startSalary !== 0}}" class="fr ft14 ft-col-orange">{{item.startSalary}} - {{item.endSalary}}</view>
+                  <view wx:else class="fr ft14 ft-col-orange">面议</view>
+              </view>
+              <view class="ft-col-grayB5 ft14 jobListN-cont-li-div1">{{item.occupationTypeName}}</view>
+              <view class="ft-col-grayB5 ft14 jobListN-cont-li-div">
+                    <label class="ft12">{{item.jobCity}}</label>
+                    <label class="ft12 icon ico-job-res-work jobListN-cont-li-ico"></label>
+                    <label class="ft12">{{item.expString}}</label>
+                    <label class="ft12 icon ico-job-res-edu jobListN-cont-li-ico"></label>
+                    <label class="ft12">{{item.eduString}}</label>
+              </view>
+              <view class="clear jobListN-cont-li-bottom">
+                    <image class="fl bdR-100p lazy" mode="scaleToFill" src="{{item.compLogo}}"></image>
+                    <view class="fl ft-col-green ft13">{{item.compName}}</view>
+                    <view class="fr ft-col-grayB3 ft13">{{item.jobLogtime}}</view>
+              </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<!--搜索框  -->
+<view hidden='{{!zxzwShow}}' class="view2">
+      <view class="jobSearch-contain clear">
+          <view bindtap="returnsj" class="icon ico-sys-head-return fl ft26 jobSearch-return"></view>
+          <view class="fr jobSearch-cont">
+                <view bindtap="tcshow" class="fl">
+                    <view style="top:-1px;" class="pos-rel dpl-ib ft13 ft-col-green">{{zhiwei}}</view>
+                    <view style="top:-1px;" class="pos-rel icon dpl-ib ico-sys-trg-down jobSearch-ico ft-col-green"></view>
+                </view>
+                <input bindconfirm="searchJob" bindblur="getkeyWord" type="text" class="fl ft13 ft-col-gray jobSearch-cont-inp" placeholder-class="place-class" placeholder="请输入关键字" maxlength="15" value="{{value}}"/>
+                <view bindtap="searchJob" form-type="submit" class="fr txt-c ft13 bd-col-left-gray jobSearch-cont-searchBtn">搜索</view>
+                <view class="pos-abs bdR-5 jobSearch-cont-div {{sstcopen ? 'show' : 'hide'}}">
+                    <view class="pos-rel jobSearch-cont-contain jobSearch-job-pos">
+                        <view class="icon  dpl-ib ico-job-recruit-work ft20 ft-col-white jobSearch-cont-ico "></view>
+                        <view bindtap="zhiwei" class="ft-col-white ft14  dpl-ib jobSearch-cont-span ">职位</view>
+                    </view>
+                    <view class="pos-rel jobSearch-cont-contain jobSearch-company-pos">
+                        <view class="icon dpl-ib ico-job-recruit-recommend ft-col-white ft18 jobSearch-cont-ico"></view>
+                        <view bindtap="gongsi" class="ft-col-white dpl-ib ft14 jobSearch-cont-span">公司</view>
+                    </view>
+                    <view class="pos-abs job-line"></view>
+                    <view class="pos-abs jobList-square"></view>
+                </view>
+          </view>
+      </view>
+      <view class="job-main">
+          <navigator hover-class="none" class="dpl-ib w-100p ft-col-gray jobSearch-li" url="url">热门搜索</navigator>
+          <div bindtap="search" hover-class="none" class="dpl-ib ft16 jobSearch-liSpan" data-word="{{xiaoshou}}">{{xiaoshou}}</div>
+          <div bindtap="search" hover-class="none" class="dpl-ib ft16 jobSearch-liSpan" data-word="{{kuaiji}}">{{kuaiji}}</div>
+          <div bindtap="search" hover-class="none" class="dpl-ib ft16 jobSearch-liSpan" data-word="{{wenyuan}}">{{wenyuan}}</div>
+          <div bindtap="search" hover-class="none" class="dpl-ib ft16 jobSearch-liSpan" data-word="{{renshi}}">{{renshi}}</div>
+          <div bindtap="search" hover-class="none" class="dpl-ib ft16 jobSearch-liSpan" data-word="{{chuna}}">{{chuna}}</div>
+      </view>
+</view>

@@ -1,0 +1,19 @@
+<!--pages/RecApply/RecApply.wxml-->
+<view class="jobMgr-receive-li">
+      <view class="clear bd-col-bottom-gray-dashed jobMgr-li-top">
+          <text class="fl ft14 ft-col-green">演员</text>
+          <text class="fr ft12 ft-col-gray">昨天</text>
+      </view>
+      <view class="clear jobMgr-li-mid">
+          <image src="" class="fl bdR-100p jobMgr-li-mid-img"></image>
+          <view class="fr jobMgr-li-mid-p">
+              <view class="clear jobMgr-li-p-cont">
+                  <view class="clear jobMgr-li-p-cont-top txt-l ellip">
+                      <text class="ft12 ft-col-orange jobMgr-li-cont-span">9K-12K</text>
+                      <text class="ft12 ft-col-gray jobMgr-li-cont-span"> 杭州市-临安市  2年以上</text>
+                  </view>
+                  <view class="ft12 ft-col-gray ellip jobMgr-li-cont-job">奇异果网络科技</view>
+              </view>
+          </view>
+      </view>
+</view>

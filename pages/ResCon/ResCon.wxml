@@ -1,0 +1,43 @@
+<!--pages/ResCon/ResCon.wxml-->
+<view class="bg-col-white">
+    <view class="list-li">
+          <view class="list-li-left">联系电话</view>
+          <view class="list-li-center">
+              <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="phone" class="pos-rel list-li-center-inp"  placeholder="联系电话" type="number" maxlength="15"/>
+          </view>
+          <view class="list-li-right">
+              <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+          </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+          <view class="list-li-left">微信</view>
+          <view class="list-li-center">
+              <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="wx" class="pos-rel list-li-center-inp"  placeholder="微信" type="text" maxlength="20"/>
+          </view>
+          <view class="list-li-right">
+              <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+          </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+          <view class="list-li-left">电子邮箱</view>
+          <view class="list-li-center">
+              <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="mail" class="pos-rel list-li-center-inp"  placeholder="电子邮箱" type="text" maxlength="30"/>
+          </view>
+          <view class="list-li-right">
+              <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+          </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+          <view class="list-li-left">现居住地</view>
+          <view class="list-li-center">
+              <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="area" class="pos-rel list-li-center-inp"  placeholder="现居住地" type="text" maxlength="30"/>
+          </view>
+          <view class="list-li-right">
+              <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+          </view>
+    </view>
+    <navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>
+</view>

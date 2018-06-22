@@ -1,0 +1,81 @@
+<!--pages/JobDetail/JobDetail.wxml-->
+  <view class="common-bgG"></view>
+  <view id="wrapper" class="pos-abs bg-col-grayLight zIndex1 main">
+      <view id="scroller" class="pos-abs w-100p">
+      <!-- 头部 -->
+          <view class="bg-col-white ft-col-new jobListN-top">
+              <view class="clear jobListN-top-top">
+                  <text class="fl">{{detailData.jobInfo.jobInfoName}}</text>
+                  <text class="fr ft-col-grayB3 ft12">浏览量  {{detailData.jobInfo.jobInfoHis}}</text>
+              </view>
+              <view class="clear ft14 jobListN-top-top">
+                  {{detailData.jobInfo.jobInfoCity}}
+              </view>
+              <view class="clear bd-col-bottom-grayLight ft14 jobListN-top-top">
+              <text decode="true" space="nbsp" class="ft13 ft-col-orange jobView-job-mgL">
+              <text class="ft15">{{detailData.jobInfo.jobInfoMoneyStart}}</text>
+              <text wx:if="{{detailData.jobInfo.jobInfoMoneyEnd !== null}}" class="ft15">-{{detailData.jobInfo.jobInfoMoneyEnd}} 元</text>
+              </text>
+                  <text class="icon ft14 ft-col-grayB3 ico-job-res-work"></text>
+                  <text decode="true" space="nbsp" class="ft13 ft-col-new jobView-job-mgR"><text class="ft15">{{detailData.jobInfo.jobInfoWork}}</text></text>
+                  <text class="icon ft14 ft-col-grayB3 ico-job-res-edu"></text>
+                  <text class="ft14 ft-col-new jobView-job-mgR">{{detailData.jobInfo.jobInfoEdu}}</text>
+              </view>
+              <view class="jobView-hide-top">
+                  <text wx:key="index" wx:for="{{labelData}}" class="label-span label-span-mgB">{{item}}</text>
+              </view>
+          </view>
+      <!-- 公司名称 -->
+          <view class="pos-rel bg-col-white jobListN-comp" bindtap='goDetail'>
+              <view class="jobListN-comp-view">
+                  <text decode="true" space="nbsp" class="ft14 ft-col-grayB3">公司名称&nbsp;&nbsp;</text>
+                  <text class="ft14 ft-col-new">{{detailData.compInfo.compInfoNameLong}}</text>
+              </view>
+              <view class="jobListN-comp-view">
+                  <text decode="true" space="nbsp" class="ft14 ft-col-grayB3">行业定位&nbsp;&nbsp;</text>
+                  <text decode="true" space="nbsp" class="ft14 ft-col-new">{{detailData.compInfo.comInfoIndstry}}</text>
+              </view>
+              <view class="icon ico-sys-btn-rightArrow ft20 ft-col-grayC5 jobListN-pos"></view>
+          </view>
+      <!-- 职位描述 -->
+          <view class="bg-col-white jobView-jobDes">
+                  <view class="bd-col-bottom-grayDark ft-col-green ft15 jobView-companyDes-title">职位描述</view>
+                  <view class="ft13 ft-col-new jobView-jobDes-cont">
+                      <view class="jobView-jobDes-height">
+                          {{detailData.jobInfo.jobInfoIntro}}
+                      </view>
+                  </view>
+          </view>
+      <!--联系方式  -->
+          <view class="bg-col-white jobListN-contact">
+              <view class="bd-col-bottom-grayDark ft-col-green ft15 jobView-companyDes-title">联系方式</view>
+              <view class="clear jobListN-contact-div">
+                  <text decode="true" space="nbsp" class="fl ft-col-grayB3 jobListN-contact-fl">招&nbsp;&nbsp;聘&nbsp;&nbsp;人</text>
+                  <view class="fl ft-col-new jobListN-contact-fr">{{detailData.compCon.compContName}}  {{detailData.compCon.comContJob}}</view>
+              </view>
+              <view class="clear jobListN-contact-div">
+                  <view class="fl ft-col-grayB3 jobListN-contact-fl">联系电话</view>
+                  <view class="fl ft-col-new jobListN-contact-fr">{{detailData.compCon.compConTel}}</view>
+              </view>
+              <view class="clear jobListN-contact-div">
+                  <text decode="true" space="nbsp" class="fl ft-col-grayB3 jobListN-contact-fl">微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信</text>
+                  <view class="fl ft-col-new jobListN-contact-fr">{{detailData.compCon.compContWchat}}</view>
+              </view>
+              <view wx:if="{{detailData.compCon.compContMail}}" class="clear jobListN-contact-div">
+                  <text decode="true" space="nbsp" class="fl ft-col-grayB3 jobListN-contact-fl">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</text>
+                  <view class="fl ft-col-new jobListN-contact-fr">{{detailData.compCon.compContMail}}</view>
+              </view>
+              <view class="clear jobListN-contact-div">
+                  <view class="fl ft-col-grayB3 jobListN-contact-fl">工作地点</view>
+                  <view class="fl ft-col-new jobListN-contact-fr">{{detailData.jobInfo.mapDetail}}</view>
+              </view>
+          </view>
+          
+      </view>
+  </view>
+  <view class="clear pos-fix w-100p bg-col-white Fd-bottom">
+    <view data-phone="{{detailData.compCon.compConTel}}" class="dpl-b fl txt-c pos-rel Fd-bottom-com" bindtap="phoneHideShow">
+        <view class="ico-job-res-tel Fd-bottom-phoneIco ft-col-green"></view>
+        <view class="ft12 ft-col-green">电话</view>
+    </view> 
+  </view>

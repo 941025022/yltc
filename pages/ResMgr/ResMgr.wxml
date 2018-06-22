@@ -1,0 +1,63 @@
+<!--pages/ResMgr/ResMgr.wxml-->
+<view class="w-100p bg-col-white bd-col-bottom-gray resMag-top-ul clear">
+    <view class="txt-c fl pos-rel bd-col-right-gray resMag-top-lir">
+        <view class="dpl-b pos-rel txt-c icon ico-col-orange resMag-top-icon ico-job-mgrRes-battery">
+            <text class="pos-abs ft10 resMag-top-iconnum">100%</text>
+        </view>
+        <text class="dpl-b ft-col-gray ft12">简历完整度</text>
+    </view>
+    <view class="fl pos-rel txt-c bd-col-right-gray resMag-top-lir">
+       <view class="icon pos-rel dpl-b txt-c ico-job-mgrRes-refresh resMgr-ico-ft ico-col-green"></view>
+       <text class="dpl-b ft-col-gray ft12 resMgr-mgTop">刷新到当前日期</text>
+    </view>
+    <navigator url="../ResView/ResView" class="fl pos-rel txt-c resMag-top-lir">
+       <view class="icon pos-rel dpl-b txt-c ico-job-mgrRes-preview resMgr-ico-ft ico-col-green"></view>
+       <text class="dpl-b ft-col-gray ft12 resMgr-mgTop">预览简历</text>
+    </navigator>
+</view>
+<view class="resmag-cont">
+    <view class="bg-col-white w-100p bd-col-bottom-gray resMag-cont-ul">
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResBase/ResBase" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">基本简历</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+           </navigator>
+       </view>
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResIntention/ResIntention" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">求职意向</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+               <text class="fr ft12 ft-col-green resMgr-font-span">去完善</text>
+           </navigator>
+       </view>
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResSelf/ResSelf" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">我的亮点</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+           </navigator>
+       </view>
+    </view>
+    <view class="bg-col-white w-100p bd-col-bottom-gray resMag-cont-ul">
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResEduEdit/ResEduEdit" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">教育经历</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+               <text class="fr ft12 ft-col-green resMgr-font-span">去完善</text>
+           </navigator>
+       </view>
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResWorkEdit/ResWorkEdit" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">工作经验</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+           </navigator>
+       </view>
+    </view>
+    <view class="bg-col-white w-100p bd-col-bottom-gray resMag-cont-ul">
+       <view class="bd-col-top-gray resMag-cont-li">
+           <navigator hover-class="none" url="../ResCon/ResCon" class="clear dpl-ib w-100p">
+               <text class="fl ft15 resMag-cont-span">联系信息</text>
+               <text class="icon ico-sys-btn-rightArrow resMag-cont-icon"></text>
+           </navigator>
+       </view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+/**index.wxss**/
+.container{
+    margin: 3%;
+    padding: 2%;
+    opacity: 0.5;
+    background: #ff55bb;
+}
+.nav-title{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.nav-li{
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin: 10px 0;
+}

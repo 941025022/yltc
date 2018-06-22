@@ -1,0 +1,16 @@
+<view class="container">
+ <view class="touch-item" wx:for="{{items}}" wx:key="index">
+    <view class="content">
+      <view class="ft14 ft-col-green ellip resWorkList-div-cont">Node.js</view>
+      <view class="clear ft13 ft-col-gray resEdu-line">
+          <text class="fl w-50p dpl-b ellip">{{item.name}}</text>
+          <text class="fr ft-col-grayC3">2012.01 - 2012.02</text>
+      </view>
+    </view>
+    <view class="dialog {{flag ? 'show' : 'hide'}}">
+             <navigator hover-class="none" url="url" class="dialog-fl">编辑</navigator> 
+             <view data-index="{{index}}"  bindtap="lidelete" class="dialog-fr">删除</view>
+    </view>
+ </view>
+</view>
+<navigator hover-class="none" url="../ResEduEdit/ResEduEdit" class="bottom-whole-btn">添加工作经历</navigator> 

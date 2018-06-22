@@ -1,0 +1,68 @@
+/* pages/compDetail/compDetail.wxss */
+.comp-top {
+    padding: 20px 0;
+}
+.comp-main {
+    overflow-y: auto;
+}
+.jobView-companyDes {
+    width: 100%;
+    margin-top: 10px;
+    margin: 10px auto 0;
+}
+.comp-jobList {
+    margin-top: 10px;
+}
+.comp-top-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #000;
+    margin: 0 auto 15px auto;
+}
+.comp-top-p {
+    margin-bottom: 5px;
+}
+.ft-col-blue {
+    color: #70aaeb;
+}
+.comp-top-p-span {
+    margin-right: 2%;
+}
+.jobView-companyDes-title {
+    height: 40px;
+    line-height: 40px;
+    width: 94%;
+    padding: 0 3%;
+}
+.jobView-companyDes-cont {
+    width: 93%;
+    padding: 17px 3.5%;
+}
+.ft-col-new {
+    color: #737373;
+}
+.jobView-companyDes-cont-p {
+    overflow: hidden;
+    line-height: 1.5em;
+    height: 6em;
+}
+.comp-jobList {
+    margin-top: 10px;
+}
+.comp-jobList-list {
+    padding: 0px 3%;
+}
+.comp-jobList-list-div {
+    padding: 16px 0;
+}
+.com-money {
+    margin: 5px 0;
+}
+.jobView-job-mgL {
+    margin-right: 15px;
+}
+.jobView-job-mgR {
+    margin-right: 15px;
+    margin-left: 5px;
+}

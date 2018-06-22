@@ -1,0 +1,84 @@
+<!--pages/ResWorkEdit/ResWorkEdit.wxml-->
+<view style="display:{{view1}}">
+    <view class="list-li">
+              <view class="list-li-left">公司名称</view>
+              <view class="list-li-center">
+                  <input bindblur="chongying" style="right:{{right}};top:{{top}}" name="company" class="pos-rel list-li-center-inp"  placeholder="公司名称" type="text" maxlength="15"/>
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view bindtap="go2" class="list-li">
+              <view class="list-li-left">担任职务</view>
+              <view class="list-li-center">
+                <view class="list-li-center-inp">担任职务</view>
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="list-li">
+              <view class="list-li-left">在职时间</view>
+              <view class="list-li-center">
+                <picker class="rzsj" fields='month' mode="date" value="{{date}}" start="1940-09" end="2017-09" bindchange="bindDateChange">
+                  <view class="picker">
+                    {{date}}
+                  </view>
+                </picker>
+                <view class="hx">-</view>
+                <picker class="lzsj" fields='month' mode="date" value="{{date}}" start="1940-09-01" end="2017-09-01" bindchange="bindDateChange2">
+                  <view class="picker">
+                    {{date2}}
+                  </view>
+                </picker>
+
+              </view>
+              <view class="list-li-right">
+                  <view class="icon ico-sys-btn-rightArrow list-li-right-ico"></view>
+              </view>
+    </view>
+    <view class="common-line-w-97p"></view>
+    <view class="bg-col-white gzms">工作描述</view>
+    <textarea class="bg-col-white gzms-text" placeholder-class="gzms-place" maxlength="500" placeholder="描述你在上一任职务中取得的成绩以及突破，可以吸引更多的BOSS来关注你！" />
+    <navigator url="../ResMgr/ResMgr" class="bottom-part-btn">确定</navigator>
+</view>
+<view class="bg-col-white" style="display:{{view2}}">
+   <view bindtap="go3" class="bd-col-bottom-gray area-contain">
+        <!--数据库读取的数据S-->
+        <view class="pos-rel w-100p area-contain-top">
+            <view class="pos-rel fl ft15 w-100p area-contain-top-left">销售</view>
+            <view class="fr txt-r icon ft14 ico-sys-btn-rightArrow area-list-li-right-ico"></view>
+        </view>
+        <view class="clear w-97p">
+                <text class="labelView">销售 | </text>
+                <text class="labelView">销售管理 | </text>
+                <text class="labelView">销售行政 | </text>
+        </view>
+        <!--读取结束E-->
+    </view>
+    <view class="bd-col-bottom-gray area-contain">
+        <!--数据库读取的数据S-->
+        <view class="pos-rel w-100p area-contain-top">
+            <view class="pos-rel fl ft15 w-100p area-contain-top-left">销售</view>
+            <view class="fr txt-r icon ft14 ico-sys-btn-rightArrow area-list-li-right-ico"></view>
+        </view>
+        <view class="clear w-97p">
+                <text class="labelView">销售 | </text>
+                <text class="labelView">销售管理 | </text>
+                <text class="labelView">销售行政 | </text>
+        </view>
+        <!--读取结束E-->
+    </view>
+</view>
+<view style="display:{{view3}}">
+    <view style="height:{{height}}px" class="fl dpl-ib tabList-left" >
+          <view wx:for="{{items}}" wx:key="{{item.userId}}" wx:for-index="idx"  bindtap="userListAction" data-idx="{{idx}}" class="w-100p ResWorkEditLi {{userCellId==idx?'active':'unactive'}}">{{item.name}}</view>
+    </view>
+    <view style="height:{{height}}px" class="contentTab">
+          <view wx:for="{{works}}" wx:key="{{item.userId}}" wx:for-index="idx" class="dpl-ib job-btn btn-sel-out">{{item.work}}</view>
+          
+    </view>
+</view>

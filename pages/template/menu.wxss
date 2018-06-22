@@ -1,0 +1,27 @@
+.footer-nav {
+    height: 53px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fcfcfc;
+    z-index: 5;
+}
+.footer-nav-li {
+    width: 25%;
+    text-align: center;
+    float: left;
+    height: 53px;
+    position: relative;
+    line-height: 1em;
+    color: #9b9b9b;
+}
+.footer-nav-li-span {
+    display: block;
+    margin-top: 8px;
+}
+.footer-nav-li-txt {
+    display: block;
+    margin-top: 5px;
+    color: #9b9b9b;
+}

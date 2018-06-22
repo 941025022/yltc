@@ -1,0 +1,294 @@
+/* pages/JobList/JobList.wxss */
+.aOn {
+    color: #3bc032!important;
+    background-color: #e8f8e7!important;
+}
+.view1{
+  background-color: #e9ece9;
+}
+.view2{
+  background-color: #fff;
+}
+.head-tbl{
+    z-index: 2;
+}
+.jobListHead{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 43px;
+  line-height: 43px;
+  padding-top: 14px;
+  background-color: #e9ece9;
+  z-index: 2;
+}
+.sousuo{
+  background-color: #fff;
+  width: 70%;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+  border-radius: 25px;
+  color: #ccc;
+}
+.jiahead{
+  position: fixed;
+  top: 0;
+  height: 57px;
+  width: 100%;
+  z-index: 3;
+}
+.nav{
+    position: fixed;
+    top: 57px;
+    z-index: 2;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.resList-nav-li {
+    width: 33%;
+    margin: 10px 0;
+    border-right: 1px solid #e0e0e0;
+    float: left;
+    text-align: center;
+    background-color: #fff;
+    color: #A9A9A9;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.li-none{
+    border-right: none;
+}
+.quyu{
+    position: fixed;
+    display: none;
+    height: 500rpx;
+    z-index: 5;
+    top: 98px;
+    width: 100%;
+}
+.quyu .qy{
+    overflow-y: scroll;
+    float: left;
+    width: 50%;
+    height: 500rpx;
+    line-height: 80rpx;
+    box-sizing: border-box; 
+    font-size: 14px;
+    color: #717273;
+}
+.qy view{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space:nowrap;  
+    padding-left: 15rpx; 
+}
+.quyu-left{
+    background: #fff;
+}
+.quyu-center{
+    background: #fff;
+}
+.quyu-right{
+    background: #f5f7f5;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.fullbg{
+    position: fixed;
+    top:57px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    /*transition: all 2s;*/
+    opacity: 0;
+    display: none;
+}
+.fullopacity{
+    opacity: .5;
+    display: block;
+}
+.money-left,.money-right{
+    width: 50%!important;
+}
+.money-right{
+  background: #f5f7f5;
+}
+
+/*列表的css*/
+.jobListN-cont-li {
+    width: 86%;
+    margin: 0 auto;
+    padding: 0 4%;
+    margin-top: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.jobListN-cont-li-top{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    top: 3px;
+    clear: both;
+    zoom: 1;
+}
+.jobListN-cont-li-div1 {
+    margin-bottom: 8px;
+}
+.jobListN-cont-li-ico {
+    margin-left: 14px;
+    margin-right: 3px;
+}
+.container-body{
+    background-color: #e9ece9;
+    margin-top: 98px;
+}
+.jobListN-cont-li-bottom {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-top: 1px solid #F2F2F2;
+}
+.lazy{
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    margin-right: 3%;
+}
+.jobListN-cont-li-div {
+    margin-bottom: 12px;
+}
+
+/*搜索页面*/
+.jobSearch-contain {
+    width: 94%;
+    height: 30px;
+    line-height: 30px;
+    padding: 9px 3% 9px 3%;
+    background-color: #ededed;
+}
+.jobSearch-return {
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    color: #000;
+    margin-top: 3px;
+}
+.jobSearch-cont {
+    position: relative;
+    width: 85%;
+    padding: 0px 0% 0px 3%;
+    height: 30px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #E3E3E3;
+}
+.place-class { /* WebKit browsers */
+    color: #ccc;
+}
+.jobSearch-cont-inp {
+    display: block;
+    width: 60%;
+    background: #fff;
+    height: 100%;
+    padding: 0;
+    margin-left: 8px;
+}
+.jobSearch-cont-searchBtn {
+    display: block;
+    width: 18%;
+    background: #fff;
+    height: 30px;
+    line-height: 31px;
+    color: #808080;
+    border-left:1px solid #e3e3e3;
+    color: #39bc30;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px
+}
+.jobSearch-cont-div {
+    width: 35%;
+    height: 82px;
+    top: 45px;
+    left: 2%;
+    background: #000;
+    background-color: rgba(0,0,0,0.7);
+}
+.jobSearch-job-pos {
+    top: 4px;
+    left: 20%;
+}
+.jobSearch-cont-ico {
+    vertical-align: middle;
+}
+.jobSearch-cont-span {
+    margin-left: 13%;
+}
+.jobSearch-ico {
+    font-size: 12px;
+    vertical-align: middle;
+}
+.jobSearch-company-pos {
+    top: 17px;
+    left: 20%;
+}
+.job-line {
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    opacity: 0.1;
+    top: 49%;
+    left: 10%;
+}
+.jobList-square {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #4C4C4C;
+    left: 27%;
+    top: -10px;
+}
+.job-main {
+    width: 92%;
+    padding: 0 4%;
+}
+.jobSearch-li {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.jobSearch-liSpan {
+    padding: 3px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    color: #8c8c8c;
+    margin-right: 16px;
+    margin-top: 10px;
+}
+.jobSearch-liSpan:nth-of-type(4) {
+    margin-right: 0;
+}
+
+
+/*新css  */
+.current{
+  background-color: #f5f7f5;
+  color: #3bc031;
+}
+.current2{
+  background-color: #ebedeb;
+  color: #3bc031;
+}

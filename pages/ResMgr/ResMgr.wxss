@@ -1,0 +1,63 @@
+/* pages/ResMgr/ResMgr.wxss */
+.resMag-top-ul {
+    padding: 9px 0;
+}
+.resMag-top-lir {
+    width: 33%;
+    height: 53px;
+}
+.resMag-top-icon {
+    font-size: 40px;
+    margin-top: -2px;
+}
+.resMag-top-iconnum {
+    top: 33%;
+    left: 50%;
+    margin-left: -12px;
+}
+.ico-col-orange {
+    color: #fa9e68;
+}
+.ico-col-green {
+    color: #39bc30;
+}
+.resMgr-mgTop {
+    margin-top: 3px;
+}
+.resMgr-ico-ft {
+    font-size: 33px;
+    margin-top: 2px;
+}
+.ico-job-mgrRes-preview:before {
+    content: "\e989";
+}
+page{
+    background-color: #e9ece9;
+}
+.resMag-cont-ul {
+    margin-top: 8px;
+}
+.resMag-cont-li {
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+.resMag-cont-li navigator{
+  width: 92%;
+  padding: 0 4%;
+}
+.resMag-cont-span {
+    float: left;
+    font-size: 15px;
+    color: #808080;
+}
+.resMag-cont-icon {
+    float: right;
+    color: #fc9c35;
+    font-size: 16px;
+    height: 56px;
+    line-height: 56px;
+}
+.resMgr-font-span {
+    margin-right: 4%;
+}
