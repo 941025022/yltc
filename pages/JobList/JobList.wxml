@@ -64,7 +64,7 @@
             <view bindtap="openJobDetail" data-id="{{item.jobId}}" class="jobListN-cont-li" wx:for="{{listData}}" wx:key='{{index}}'>
               <view class="jobListN-cont-li-top">
                   <view class="fl ft15">{{item.occupationName}}</view>
-                  <view wx:if="{{item.startSalary !== 0}}" class="fr ft14 ft-col-orange">{{item.startSalary}} - {{item.endSalary}}</view>
+                  <view wx:if="{{item.startSalary !== 0}}" class="fr ft14 ft-col-orange">{{item.startSalary}}K - {{item.endSalary}}K</view>
                   <view wx:else class="fr ft14 ft-col-orange">面议</view>
               </view>
               <view class="ft-col-grayB5 ft14 jobListN-cont-li-div1">{{item.occupationTypeName}}</view>

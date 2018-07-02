@@ -56,11 +56,11 @@ Page({
     })
     // 加载列表数据
     that.loadData(that.data.bean)
-    // wx.getUserInfo({
-    //   success: function (res) {
-    //     that.setCity(res.userInfo.city)
-    //   }
-    // })
+    wx.getUserInfo({
+      success: function (res) {
+        that.setCity(res.userInfo.city)
+      }
+    })
     // 页面初始化 options为页面跳转所带来的参数
     wx.getSystemInfo({
       success: function(res) {
@@ -199,25 +199,26 @@ Page({
       // 加载列表数据
       this.data.bean.page = 1
       this.loadData(this.data.bean)
+    } else {
+      wx.request({
+        url: app.globalData.apiUrl + '/api/Occupations', //url
+        data: {
+          code: e.target.dataset.code
+        },
+        method: 'GET',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          that.setData({
+            secondJobTypeData: res.data.Data
+          })
+        },
+        fail: function (res) {
+          console.log(res.message)
+        }
+      })
     }
-    wx.request({
-      url: app.globalData.apiUrl + '/api/Occupations', //url
-      data: {
-        code: e.target.dataset.code
-      },
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        that.setData({
-          secondJobTypeData: res.data.Data
-        })
-      },
-      fail: function (res) {
-        console.log(res.message)
-      }
-    })
   },
   // 点击职位类型第二列筛选
   clickSecondType: function (e) {
@@ -253,15 +254,15 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        let data=[]
-        for (var i = 0; i <= res.data.Data.length - 1; i++) {
-          // shiData = that.data.cityleft.concat(res.data.Data[i].citys)
-          for (var j = 0; j <= res.data.Data[i].citys.length - 1; j++) {
-            data.push(res.data.Data[i].citys[j])
-          }
-        }
+        // let data=[]
+        // for (var i = 0; i <= res.data.Data.length - 1; i++) {
+        //   // shiData = that.data.cityleft.concat(res.data.Data[i].citys)
+        //   for (var j = 0; j <= res.data.Data[i].citys.length - 1; j++) {
+        //     data.push(res.data.Data[i].citys[j])
+        //   }
+        // }
         that.setData({
-          citycenter: data
+          citycenter: res.data.Data
         })
       },
       fail: function (res) {
@@ -458,8 +459,8 @@ Page({
             // 将时间格式化
             dataFor[i].jobLogtime = that.dateJsonStringHours(dataFor[i].jobLogtime)
             if (dataFor[i].startSalary !== 0) {
-              dataFor[i].startSalary = String(dataFor[i].startSalary).replace('000', 'K')
-              dataFor[i].endSalary = String(dataFor[i].endSalary).replace('000', 'K')
+              dataFor[i].startSalary = String(dataFor[i].startSalary).replace('000', '')
+              dataFor[i].endSalary = String(dataFor[i].endSalary).replace('000', '')
             }
           }
           that.setData({
@@ -499,6 +500,9 @@ Page({
     that.setData({
       jobType: '职位'
     })
+    if (that.data.keyWord === '') {
+      that.data.keyWord = ''
+    }
     wx.request({
       url: app.globalData.apiUrl + 'api/SearchJobs', //url
       data: {
