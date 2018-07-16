@@ -93,7 +93,7 @@
                     <view style="top:-1px;" class="pos-rel dpl-ib ft13 ft-col-green">{{zhiwei}}</view>
                     <view style="top:-1px;" class="pos-rel icon dpl-ib ico-sys-trg-down jobSearch-ico ft-col-green"></view>
                 </view>
-                <input bindconfirm="searchJob" bindblur="getkeyWord" type="text" class="fl ft13 ft-col-gray jobSearch-cont-inp" placeholder-class="place-class" placeholder="请输入关键字" maxlength="15" value="{{value}}"/>
+                <input bindconfirm="searchJob" bindinput="getkeyWord" type="text" class="fl ft13 ft-col-gray jobSearch-cont-inp" placeholder-class="place-class" placeholder="请输入关键字" maxlength="15" value="{{value}}"/>
                 <view bindtap="searchJob" form-type="submit" class="fr txt-c ft13 bd-col-left-gray jobSearch-cont-searchBtn">搜索</view>
                 <view class="pos-abs bdR-5 jobSearch-cont-div {{sstcopen ? 'show' : 'hide'}}">
                     <view class="pos-rel jobSearch-cont-contain jobSearch-job-pos">

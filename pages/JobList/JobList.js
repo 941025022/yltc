@@ -197,6 +197,7 @@ Page({
       });
       this.data.bean.occupationCode = e.target.dataset.code
       // 加载列表数据
+      this.data.bean.keyword = ''
       this.data.bean.page = 1
       this.loadData(this.data.bean)
     } else {
@@ -239,6 +240,7 @@ Page({
     }
     this.data.bean.occupationCode = e.target.dataset.code
     // 加载列表数据
+    this.data.bean.keyword = ''
     this.data.bean.page = 1
     this.loadData(this.data.bean)
   },
@@ -336,6 +338,7 @@ Page({
         area: this.data.citycenter[this.data.select2].name,
       });
     }
+    this.data.bean.keyword = ''
     this.data.bean.cityCode=e.target.dataset.value
     // 加载列表数据
     this.data.bean.page = 1
@@ -406,6 +409,7 @@ Page({
     });
     this.data.bean.endSalary = e.target.dataset.item.replace('K', '000')
     this.data.bean.page = 1
+    this.data.bean.keyword = ''
     this.loadData(this.data.bean)
   },
   // 点击遮罩层隐藏所有弹窗
@@ -478,6 +482,7 @@ Page({
   },
   // 获取搜索的关键字
   getkeyWord: function (event) {
+    console.log(event.detail.value)
     this.setData({
       keyWord: event.detail.value
     })
@@ -486,9 +491,12 @@ Page({
   searchJob: function (event) {
     this.setData({
       zxzwShow: false,
-      listData: []
+      listData: [],
+      jobType: '职位'
     })
-    this.loadKeyWord()
+    this.data.bean.keyword = this.data.keyWord
+    this.data.bean.page = 1
+    this.loadData(this.data.bean)
   },
   // 关键词搜索接口
   loadKeyWord: function (e) {
@@ -503,6 +511,7 @@ Page({
     if (that.data.keyWord === '') {
       that.data.keyWord = ''
     }
+    console.log(that.data.keyWord)
     wx.request({
       url: app.globalData.apiUrl + 'api/SearchJobs', //url
       data: {
@@ -552,7 +561,9 @@ Page({
       listData: [],
       value: e.target.dataset.word
     })
-    this.loadKeyWord()
+    this.data.bean.keyword = this.data.keyWord
+    this.data.bean.page = 1
+    this.loadData(this.data.bean)
   },
   dateJsonStringHours: function(val){
     return this.dateJsonStringHoursee(val);
