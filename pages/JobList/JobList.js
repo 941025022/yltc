@@ -559,9 +559,15 @@ Page({
       keyWord: e.target.dataset.word,
       zxzwShow: false,
       listData: [],
-      value: e.target.dataset.word
+      value: e.target.dataset.word,
+      area: '城市',
+      moneyMin: '月',
+      moneyMax: '薪'
     })
     this.data.bean.keyword = this.data.keyWord
+    this.data.bean.startSalary = ''
+    this.data.bean.endSalary = ''
+    this.data.bean.cityCode = ''
     this.data.bean.page = 1
     this.loadData(this.data.bean)
   },
